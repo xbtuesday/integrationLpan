@@ -56,7 +56,7 @@ public class RedisServiceImpl implements RedisService {
 	public void delete(String key) {
 		Jedis jedis = null;
 		jedis = jedisPool.getResource();
-		Long del = jedis.del(key);
+		jedis.del(key);
 	}
 
 	public String get(String key) {
